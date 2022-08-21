@@ -8,12 +8,12 @@
 
 <div align="center">
   <h3>
-    <a href="https://{your-demo-link.your-domain}">
-      https://cheery-gnome-155bcb.netlify.app/
+    <a href="https://cheery-gnome-155bcb.netlify.app/">
+      Demo
     </a>
     <span> | </span>
-    <a href="https://{your-url-to-the-solution}">
-      https://github.com/jukha/country-quiz-master
+    <a href="https://github.com/jukha/country-quiz-master">
+      Solution
     </a>
     <span> | </span>
     <a href="https://devchallenges.io/challenges/Bu3G2irnaXmfwQ8sZkw8">
