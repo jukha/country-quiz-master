@@ -1,1 +1,37 @@
-<h1>Current Country: {{currCountry?.name}}</h1>
+<ngx-spinner bdColor="rgba(0, 0, 0, 0.8)" size="medium" color="#fff" type="square-jelly-box" [fullScreen]="true">
+  <p style="color: white"> Loading... </p>
+</ngx-spinner>
+<div class="quiz" *ngIf="fourRandomCountries.length>0">
+  <h1 class="main-title">
+    Country quiz
+  </h1>
+  <div class="card" *ngIf="!endQuiz">
+    <img class="card-img" src="assets/img/undraw_adventure_4hum 1.svg">
+    <img *ngIf="isFlagQuestion" [src]="currCountry?.flags['svg']" class="country-flag">
+
+    <h3 *ngIf="isCaptialQuestion" class="question">{{currCountry?.capital[0]}} {{currQuestion}}</h3>
+    <h3 *ngIf="isFlagQuestion" class="question">{{currQuestion}}</h3>
+    <div class="options">
+      <button #optionButton class="option cp" *ngFor="let singleCountry of fourRandomCountries;let i = index;"
+        (click)="selectedOption(i);toggleButtonColor(i,optionButton)">
+        <span class="option-no">{{(i+10).toString(36).toUpperCase()}}</span>
+
+        <span> {{singleCountry?.name['official']}}</span>
+      </button>
+      <div class="next">
+        <a href="javascript:void(0)" class="btn btn-next" (click)="checkAnswer(selectOption)">Next</a>
+      </div>
+      <p #selectOption class="please-select">
+        Please select an option!
+      </p>
+    </div>
+  </div>
+  <div class="card quiz-end-card" *ngIf="endQuiz">
+    <img src="assets/img/undraw_winners_ao2o 2.svg" class="quiz-end-pic">
+    <div class="quiz-end-text">
+      <h3>Results</h3>
+      <p class="result">You got <span class="score">{{score}}</span> correct answers</p>
+    </div>
+    <a href="javascript:void(0)" class="btn btn-try-again" (click)="tryAgain()">Try again</a>
+  </div>
+</div>

@@ -1,0 +1,172 @@
+.cp {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 27px;
+  border-radius: 12px;
+  padding: 15px 37px;
+  display: inline-block;
+}
+
+.next {
+  text-align: right;
+}
+
+.btn-next {
+  box-shadow: 0px 2px 4px rgba(252, 168, 47, 0.4);
+  color: #FFFFFF;
+  background: #F9A826;
+  width: max-content;
+}
+
+.btn-try-again {
+  color: #1D355D;
+  border: 2px solid #1D355D;
+}
+
+.main-title {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 54px;
+  text-transform: uppercase;
+  color: #F2F2F2;
+  margin-bottom: 10px;
+}
+
+.card {
+  background: #FFFFFF;
+  border-radius: 24px;
+  padding: 68px 32px;
+  min-width: 464px;
+  min-height: 542px;
+  position: relative;
+}
+
+.quiz-end-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 70px;
+}
+
+.quiz-end-card h3 {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 72px;
+  color: #1D355D;
+}
+
+.quiz-end-text {
+  text-align: center;
+}
+
+.result {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  color: #1D355D;
+}
+
+.score {
+  color: #6FCF97;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+
+.card-img {
+  position: absolute;
+  top: -70px;
+  right: 0;
+}
+
+.country-flag {
+  width: 84px;
+  height: 54px;
+}
+
+.question {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  color: #2F527B;
+  margin-bottom: 32px;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.option {
+  background: #FFFFFF;
+  border: 2px solid rgba(96, 102, 208, 0.7);
+  border-radius: 12px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  color: rgba(96, 102, 208, 0.8);
+  padding: 10px 19px;
+  display: flex;
+  align-items: center;
+}
+
+.is-right {
+  background: #60BF88;
+  color: #fff;
+  border-color: transparent;
+}
+
+.is-wrong {
+  background: #EA8282;
+  color: #fff;
+  border-color: transparent;
+}
+
+.selected {
+  background: #F9A826;
+  color: #ffffff;
+  border-color: transparent;
+}
+
+.option[data-value="disabled"]:hover {
+  background: #FFFFFF;
+  border: 2px solid rgba(96, 102, 208, 0.7);
+  color: rgba(96, 102, 208, 0.8);
+
+}
+
+.option:hover {
+  background: #F9A826;
+  color: #ffffff;
+  border-color: transparent;
+}
+
+.option-no {
+  margin-right: 46px;
+}
+
+.please-select {
+  display: none;
+  color: red;
+  position: absolute;
+  bottom: 10px;
+}
