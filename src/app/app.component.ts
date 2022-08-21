@@ -55,6 +55,7 @@ export class AppComponent implements OnInit, AfterViewInit {
   }
   startTheQuiz() {
     this.endQuiz = false;
+    this.userOption = -1;
     this.setRandomQuestion();
     this.fourRandomCountries = [];
     this.setFourRandomCountries(this.countries);
@@ -78,7 +79,7 @@ export class AppComponent implements OnInit, AfterViewInit {
   // 02
   setFourRandomCountries(arr: any[]) {
     for (let i = 0; i < 4; i++) {
-      this.fourRandomCountries.push(arr[i]);
+      this.fourRandomCountries.push(arr[this.getRandomIndex(arr.length)]);
     }
     this.correctOption = this.getRandomIndex(this.fourRandomCountries.length);
     this.currCountry = this.fourRandomCountries[this.correctOption];
@@ -133,11 +134,15 @@ export class AppComponent implements OnInit, AfterViewInit {
               e.classList.add('is-wrong');
             }
           }
+          if (i == this.correctOption) {
+            e.classList.remove('selected');
+            e.classList.add('is-right');
+          }
         });
         setTimeout(() => {
           this.resetOptions();
           this.endQuiz = true;
-        }, 500);
+        }, 700);
       }
     } else {
       msg.style.display = 'block';

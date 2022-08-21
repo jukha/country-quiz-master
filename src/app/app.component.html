@@ -5,6 +5,11 @@
   <h1 class="main-title">
     Country quiz
   </h1>
+  <pre>
+    <code>
+      {{currCountry?.name?.official | json }}
+    </code>
+  </pre>
   <div class="card" *ngIf="!endQuiz">
     <img class="card-img" src="assets/img/undraw_adventure_4hum 1.svg">
     <img *ngIf="isFlagQuestion" [src]="currCountry?.flags['svg']" class="country-flag">
@@ -16,7 +21,7 @@
         (click)="selectedOption(i);toggleButtonColor(i,optionButton)">
         <span class="option-no">{{(i+10).toString(36).toUpperCase()}}</span>
 
-        <span> {{singleCountry?.name['official']}}</span>
+        <span> {{singleCountry?.name?.common}}</span>
       </button>
       <div class="next">
         <a href="javascript:void(0)" class="btn btn-next" (click)="checkAnswer(selectOption)">Next</a>
